@@ -5,11 +5,11 @@ import UserContextProvider from "./context/UserContextProvider";
 function App() {
 	return (
 		<UserContextProvider>
-			<div className="flex justify-center items-center h-screen w-screen">
+			<div className="flex flex-col justify-center items-center h-screen w-screen gap-10">
 				<h1 className="text-red-600 font-semibold">Context API</h1>
+				<Login />
+				<Profile />
 			</div>
-			<Login />
-			<Profile />
 		</UserContextProvider>
 	);
 }

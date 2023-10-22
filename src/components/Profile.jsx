@@ -6,7 +6,7 @@ const Profile = () => {
 	const { user } = useContext(UserContext);
 
 	if (user) {
-		return <div>{user.username}</div>;
+		return <div>username is {user.username}</div>;
 	}
 
 	return <div>No data available</div>;

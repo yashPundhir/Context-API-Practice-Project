@@ -18,21 +18,27 @@ const Login = () => {
 	};
 
 	return (
-		<div>
-			<h2>Login</h2>
-			<input
-				type="text"
-				placeholder="username"
-				value={username}
-				onChange={(e) => setUsername(e.target.value)}
-			/>
-			<input
-				type="password"
-				placeholder="password"
-				value={password}
-				onChange={(e) => setPassword(e.target.value)}
-			/>
-			<button onClick={handleSubmit}>Submit</button>
+		<div className="flex flex-col justify-center items-center gap-5">
+			<h2 className="text-3xl font-semibold">Login</h2>
+			<div className="flex gap-5 justify-center items-center">
+				<input
+					type="text"
+					placeholder="username"
+					value={username}
+					className="input input-bordered"
+					onChange={(e) => setUsername(e.target.value)}
+				/>
+				<input
+					type="password"
+					placeholder="password"
+					className="input input-bordered"
+					value={password}
+					onChange={(e) => setPassword(e.target.value)}
+				/>
+			</div>
+			<button className="btn btn-success" onClick={handleSubmit}>
+				Submit
+			</button>
 		</div>
 	);
 };
